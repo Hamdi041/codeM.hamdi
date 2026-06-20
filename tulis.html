@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KosVibe - Tulis Review Baru</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="bi bi-house-door-fill"></i> Kos<span class="brand-vibe">Vibe</span></a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li></ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card p-4 shadow-sm border-0 bg-white">
+                    <h4 class="fw-bold mb-4 text-success"><i class="bi bi-pencil-square"></i> Spill Jujur Kamar Kosan Kamu</h4>
+                    <form id="reviewForm">
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Pilih Hunian Kos</label>
+                                <select class="form-select input-custom" id="formNamaKos" required>
+                                    <option value="" disabled selected>Pilih properti...</option>
+                                    <option>Kos Putri Muslimah Asri</option>
+                                    <option>Kos Campur Edelweiss</option>
+                                    <option>Pondok Putra Barokah</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold d-block">Berikan Rating Bintang</label>
+                                <div class="star-rating-wrapper fs-3 text-muted" id="starRatingContainer">
+                                    <i class="bi bi-star icon-star-click" data-value="1"></i>
+                                    <i class="bi bi-star icon-star-click" data-value="2"></i>
+                                    <i class="bi bi-star icon-star-click" data-value="3"></i>
+                                    <i class="bi bi-star icon-star-click" data-value="4"></i>
+                                    <i class="bi bi-star icon-star-click" data-value="5"></i>
+                                    <input type="hidden" id="selectedRating" value="0">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-4 bg-light p-3 rounded-3 border">
+                            <label class="form-label d-block fw-semibold mb-2 text-secondary">Karakteristik Tag:</label>
+                            <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="t1"><label class="form-check-label">#IbuKosBaik</label></div>
+                            <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="t2"><label class="form-check-label">#WifiNgebut</label></div>
+                            <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="t3"><label class="form-check-label">#AirBersihLancar</label></div>
+                            <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="t4"><label class="form-check-label">#BebasJamMalam</label></div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold">Deskripsi Pengalaman Nyata</label>
+                            <textarea class="form-control input-custom" id="formCerita" rows="4" placeholder="Tulis secara detail mengenai sikap pengelola kos, lingkungan, air bersih, dll." required></textarea>
+                        </div>
+                        <div class="mb-4">
+                            <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="anonRadio" value="Anonim" checked> <label>Posting Anonim</label></div>
+                            <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="anonRadio" value="User Asli"> <label>Sesuai Profil</label></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary-custom w-100 fw-bold py-3 text-uppercase shadow-sm">Kirim Konten Ulasan <i class="bi bi-send-fill ms-1"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
